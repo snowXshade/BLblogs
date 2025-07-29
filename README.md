@@ -2,7 +2,7 @@
 
 A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, React.js, Node.js) and Lexical rich-text editor. Users can sign up, log in, write new blogs, edit their profiles, or delete their accounts.
 
----
+
 
 ## 🚀 Features Overview
 
@@ -15,7 +15,7 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
 -  Lexical Editor Integration for rich blogging experience
 - ⚙ Secure Backend with protected routes
 
----
+
 
 ## 🧭 User Journey
 
@@ -31,7 +31,7 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
    - `My Blogs`: View, edit, or delete blogs authored by the user.
    - `Logout`: Securely log out of the session.
 
----
+
 
 ## 🛠️ How to Run the Project Locally
 
