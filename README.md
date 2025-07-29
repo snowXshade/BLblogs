@@ -37,19 +37,19 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
 
 ### 1. Clone the Repository
 
-```bash  (for cloning)
+> bash  (for cloning)
 
     git clone https://github.com/snowXshade/BLblogs.git
     cd BLblogs
 
 
-```bash   (for frontend)
+> bash   (for frontend)
 
      cd frontend
      npm i
      npm run dev
 
-```bash    (for backend)
+> bash    (for backend)
 
     cd backend
     npm init -y
@@ -57,7 +57,7 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
 
 # create .env file for proper functioning
 
-```.env
+> .env
 
     JWT_SECRET = "YOUR_JWT_SECRET"
     MONGO = "mongodb://127.0.0.1:27017/blblog"  || "YOUR_MONGODB_ATLAS_URL"
