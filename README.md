@@ -1,4 +1,4 @@
-# 📝 Blblogs
+# 📝 Blblogs  (```work in progress```)
 
 A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, React.js, Node.js) and Lexical rich-text editor. Users can sign up, log in, write new blogs, edit their profiles, or delete their accounts.
 
