@@ -6,14 +6,14 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
 
 ## 🚀 Features Overview
 
-- 🔐 User Authentication (Signup/Login with JWT)
-- 👤 Dashboard with:
+-  User Authentication (Signup/Login with JWT)
+-  Dashboard with:
   - My Profile (view/edit/delete account)
   - New Blog creation (Rich Text Editor)
   - View and Manage Your Blogs (Edit/Delete)
   - Logout functionality
-- 🧠 Lexical Editor Integration for rich blogging experience
-- ⚙️ Secure Backend with protected routes
+-  Lexical Editor Integration for rich blogging experience
+- ⚙ Secure Backend with protected routes
 
 ---
 
@@ -55,7 +55,7 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
     npm init -y
     npm run dev
 
-# create .env file for proper functioning
+### create .env file for proper functioning
 
 > .env
 
