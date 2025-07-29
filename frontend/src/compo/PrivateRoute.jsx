@@ -1,28 +1,21 @@
 // PrivateRoute.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { useAuth } from '../context/AuthContext';
 
-const PrivateRoute = (props) => {
-  const { Component } = props
-  const navigate = useNavigate()
+const PrivateRoute = ({ Component }) => {
+  const navigate = useNavigate();
+  const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
-    
-    let login = localStorage.getItem('login')
-    if(!login){
-      navigate('/')
+    const token = localStorage.getItem('token');
+    if (!token) {
+      navigate('/login');
+    } else {
+      setIsAuth(true);
     }
-  })
-  
-  return (
-  <div>
-    <Component />
-  </div>
-)
+  }, [navigate]);
 
-}
-
-
+  return isAuth ? <Component /> : null;
+};
 
 export default PrivateRoute;

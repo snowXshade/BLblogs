@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
   );
 };
 
-const useAuth = () => {
+ const useAuth = () => {
   // Get shared context
   const context = useContext(AuthContext);
   

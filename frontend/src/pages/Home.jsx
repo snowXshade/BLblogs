@@ -26,14 +26,6 @@ const Home = () => {
   return (
     <div>
       <div className="min-h-screen bg-white text-gray-800 flex flex-col items-center px-4">
-      {/* Header */}
-      <header className="w-full max-w-6xl py-6 flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-blue-700">📝 DevBlog</h1>
-        <div>
-          <Link to="/login" className="mr-4 text-blue-600 hover:underline">Login</Link>
-          <Link to="/signup" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Get Started</Link>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="text-center mt-12 max-w-3xl">
@@ -62,7 +54,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="mt-20 text-center text-gray-400 text-sm pb-6">
-        © {new Date().getFullYear()} DevBlog. Made with 💙 by Ruchi Sharma
+        © {new Date().getFullYear()} DevBlog. Made with 💙 by <a href="https://github.com/arbitronmaths">Utakarsh</a> & <a href="https://github.com/snowXshade">Ruchi</a>
       </footer>
     </div>
     </div>

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
+  const { login } = useAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -16,15 +19,24 @@ const Login = () => {
     e.preventDefault();
     setError('');
     setMessage('');
+    
+    if (!formData.username || !formData.password) {
+      setError('Both fields are required.');
+      return;
+    }
 
     try {
-      const res = await axios.post('http://localhost:5000/login', formData);
+      setLoading(true);
+      const res = await axios.post('http://localhost:3000/api/auth/login', formData);
       localStorage.setItem('token', res.data.token);
       setMessage('Login successful!');
+      login();
       setTimeout(() => navigate('/dashboard'), 1000);
     } catch (err) {
       const msg = err.response?.data?.message || 'Login failed';
       setError(msg);
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -62,9 +74,10 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200"
+            disabled={loading}
+            className={`w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-200 ${loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'}`}
           >
-            Login
+            {loading ? 'Logging in...' : 'Login'}
           </button>
 
           <p className="text-center text-sm text-gray-500">

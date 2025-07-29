@@ -1,0 +1,21 @@
+.newblog-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.submit-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
