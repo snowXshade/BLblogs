@@ -60,7 +60,7 @@ A full-stack blogging platform built with **MERN Stack** (MongoDB, Express.js, R
 > .env
 
     JWT_SECRET = "YOUR_JWT_SECRET"
-    MONGO = "mongodb://127.0.0.1:27017/blblog"  || "YOUR_MONGODB_ATLAS_URL"
+    MONGO = "YOUR_MONGODB_ATLAS/LOCALHOST_URL"
     PORT = "3000"  
 
 > Now you are good to go...
